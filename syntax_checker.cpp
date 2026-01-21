@@ -28,7 +28,8 @@ bool isMatchingPair(char opening, char closing) {
 bool isValidExpression(const string& expression) {
     // TODO: Implement the syntax checker using std::stack
     stack<char> bracketStack;
-    for (char ch : expression) {
+    for (int i = 0; i < expression.length(); ++i) {
+        char ch = expression[i];
         if (ch == '(' || ch == '[' || ch == '{') {
             bracketStack.push(ch);
         } else if (ch == ')' || ch == ']' || ch == '}') {
